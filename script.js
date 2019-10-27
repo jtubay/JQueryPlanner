@@ -1,3 +1,5 @@
+
+
 $(function(){
     let d = new Date();
     
@@ -27,6 +29,23 @@ $(function(){
 
 
     $('#currentDay').text(output)
+
+
+
+const btn = document.getElementById("btnOne")
+const ins = document.getElementById("insert")
+
+btn.onclick =function () {
+    
+    const key = ins.value;
+
+    if(key) {
+        localStorage.setItem("key", key);
+        location.reload();
+        
+    }
+}
+
     
 
 })
