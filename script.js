@@ -26,9 +26,10 @@ $(function(){
     let output = (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day + '/' + year;
 
     // let output =  `${month}/${day}/${year}`
+    const m = moment();
+    const currentT = m.format("LL")
 
-
-    $('#currentDay').text(output)
+    $('#currentDay').text(currentT)
 
 
 
