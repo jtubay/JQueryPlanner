@@ -9,9 +9,9 @@ I used bootstrap to help create the columns and rows needed for the display area
 # Links to the final product and repo
 
 repo:
-https://github.com/jtubay/JSQuizGame.git
+https://github.com/jtubay/JQueryPlanner.git
 current version:
-https://jtubay.github.io/JSQuizGame/
+https://jtubay.github.io/JQueryPlanner/
 
 # screenshot
 
