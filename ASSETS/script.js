@@ -1,3 +1,4 @@
+//this function runs when the page loads
 $(function() {
   let d = new Date();
 
@@ -10,11 +11,14 @@ $(function() {
   // let output = (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day + '/' + year;
 
   // let output =  `${month}/${day}/${year}`
+
+  //below are variables and functions used to display current date using moment.js
   const m = moment();
   const currentT = m.format("LL");
 
   $("#currentDay").text(currentT);
 
+  //this is the code that gives the buttons onclicks and saves the input to ls and displays it
   $("#btnOne").on("click", function(event) {
     event.preventDefault();
     const key = $("#insert").val();
@@ -25,7 +29,7 @@ $(function() {
       location.reload();
     }
   });
-
+  //used to display ls
   const disOne = JSON.parse(localStorage.getItem("key"));
   $("#displayOne").text(disOne);
 
@@ -62,8 +66,8 @@ $(function() {
     }
   });
 
-  const disFour = JSON.parse(localStorage.getItem("keyFour"))
-    $("#displayFour").text(disFour)
+  const disFour = JSON.parse(localStorage.getItem("keyFour"));
+  $("#displayFour").text(disFour);
 
   $("#btnFive").on("click", function() {
     const keyFive = $("#insertFive").val();
@@ -74,8 +78,8 @@ $(function() {
     }
   });
 
-  const disFive = JSON.parse(localStorage.getItem("keyFive"))
-    $("#displayFive").text(disFive)
+  const disFive = JSON.parse(localStorage.getItem("keyFive"));
+  $("#displayFive").text(disFive);
 
   $("#btnSix").on("click", function() {
     const keySix = $("#insertSix").val();
@@ -86,8 +90,8 @@ $(function() {
     }
   });
 
-  const disSix = JSON.parse(localStorage.getItem("keySix"))
-    $("#displaySix").text(disSix)
+  const disSix = JSON.parse(localStorage.getItem("keySix"));
+  $("#displaySix").text(disSix);
 
   $("#btnSeven").on("click", function() {
     const keySeven = $("#insertSeven").val();
@@ -98,8 +102,8 @@ $(function() {
     }
   });
 
-  const disSeven = JSON.parse(localStorage.getItem("keySeven"))
-    $("#displaySeven").text(disSeven)
+  const disSeven = JSON.parse(localStorage.getItem("keySeven"));
+  $("#displaySeven").text(disSeven);
 
   $("#btnEight").on("click", function() {
     const keyEight = $("#insertEight").val();
@@ -110,8 +114,8 @@ $(function() {
     }
   });
 
-  const disEight = JSON.parse(localStorage.getItem("keyEight"))
-    $("#displayEight").text(disEight)
+  const disEight = JSON.parse(localStorage.getItem("keyEight"));
+  $("#displayEight").text(disEight);
 
   $("#btnNine").on("click", function() {
     const keyNine = $("#insertNine").val();
@@ -122,10 +126,12 @@ $(function() {
     }
   });
 
-  const disNine= JSON.parse(localStorage.getItem("keyNine"))
-    $("#displayNine").text(disNine)
-});
+  const disNine = JSON.parse(localStorage.getItem("keyNine"));
+  $("#displayNine").text(disNine);
 
+  //end of onclicks and ls display
+});
+//used to update and display current time
 function updateClock() {
   let currentTime = new Date();
   let currentHours = currentTime.getHours();
@@ -145,7 +151,7 @@ function updateClock() {
 
   $("#currentHourDay").text(hourOutput);
 }
-
+//sets up a time interval on load to get the clock going
 $(document).ready(function() {
   setInterval("updateClock()", 1000);
 });
