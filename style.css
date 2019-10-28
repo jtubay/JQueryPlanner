@@ -7,7 +7,7 @@
     padding: 30px;
 }
 
-input {
+textarea {
     height: 50px;
     width: 100%;
     padding: 6px;
@@ -18,3 +18,5 @@ input {
     color: green
     
   }
+
+
